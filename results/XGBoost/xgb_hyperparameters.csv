@@ -1,0 +1,2 @@
+model__eval_metric,model__learning_rate,model__max_depth,model__n_estimators,model__subsample
+logloss,0.1,2,100,0.8
