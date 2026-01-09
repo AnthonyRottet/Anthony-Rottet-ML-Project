@@ -5,22 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d03f181-2f5f-4baa-8521-75ff9eaa3438" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/ML_Final.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/processed/heart_disease_clean.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/processed/heart_disease_clean_mini.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/raw/heart_disease.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/EDA/eda_age.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/EDA/eda_bp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/EDA/eda_fbs_over_120.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Data cleaning.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Download.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EDA.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Analyse/5 models comparaison.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Analyse/KNN plot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Analyse/Univariate Logit plotter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Grid Search/KNN Grid Search.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Grid Search/Multivariate Logit Grid Search.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Grid Search/RF Grid Search.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Grid Search/SVM Grid Search.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Grid Search/XGBoost Grid Search.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model Evaluation/KNN.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model Evaluation/Multivariate Logit.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model Evaluation/RF.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model Evaluation/SVM.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model Evaluation/XGBoost.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/KNN.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Multivariate Logit.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/RF.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/SVM.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/XGBoost.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/logit.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Mutual Information.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/EDA/eda_age.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/EDA/eda_age.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/EDA/eda_bp.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/EDA/eda_bp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/EDA/eda_fbs_over_120.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/EDA/eda_fbs_over_120.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EDA.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/EDA.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,22 +58,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.Data cleaning.executor": "Run",
-    "Python.Download.executor": "Run",
-    "Python.EDA.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.5 models comparaison.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Data cleaning.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Download.executor&quot;: &quot;Run&quot;,
+    &quot;Python.EDA.executor&quot;: &quot;Run&quot;,
+    &quot;Python.KNN Grid Search.executor&quot;: &quot;Run&quot;,
+    &quot;Python.KNN plot.executor&quot;: &quot;Run&quot;,
+    &quot;Python.KNN.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Logit Plotter.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Multivariate Logistic.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Multivariate Logit Grid Search.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Multivariate Logit.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Mutual Information.executor&quot;: &quot;Run&quot;,
+    &quot;Python.RF Grid Search.executor&quot;: &quot;Run&quot;,
+    &quot;Python.RF.executor&quot;: &quot;Run&quot;,
+    &quot;Python.SVM Grid Search.executor&quot;: &quot;Run&quot;,
+    &quot;Python.SVM.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Univariate Logit plotter.executor&quot;: &quot;Run&quot;,
+    &quot;Python.XGBoost Grid Search.executor&quot;: &quot;Run&quot;,
+    &quot;Python.XGBoost.executor&quot;: &quot;Run&quot;,
+    &quot;Python.logit.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\TOTO2\PycharmProjects\ML_Final" />
+      <recent name="C:\Users\TOTO2\PycharmProjects\ML_Final\src\Model" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -86,16 +120,80 @@
       <workItem from="1767886352332" duration="436000" />
       <workItem from="1767886829912" duration="344000" />
       <workItem from="1767887199687" duration="748000" />
-      <workItem from="1767887975792" duration="610000" />
+      <workItem from="1767887975792" duration="889000" />
+      <workItem from="1767888904193" duration="77000" />
+      <workItem from="1767889001403" duration="208000" />
+      <workItem from="1767889248836" duration="221000" />
+      <workItem from="1767889539695" duration="151000" />
+      <workItem from="1767889706360" duration="40000" />
+      <workItem from="1767889781411" duration="98000" />
+      <workItem from="1767890346102" duration="320000" />
+      <workItem from="1767890811326" duration="52000" />
+      <workItem from="1767891682265" duration="252000" />
+      <workItem from="1767891959859" duration="78000" />
+      <workItem from="1767892066020" duration="63000" />
+      <workItem from="1767892152192" duration="69000" />
+      <workItem from="1767892235394" duration="65000" />
+      <workItem from="1767892383442" duration="214000" />
+      <workItem from="1767892691353" duration="202000" />
+      <workItem from="1767892971137" duration="34000" />
+      <workItem from="1767893025454" duration="36000" />
+      <workItem from="1767893074255" duration="109000" />
+      <workItem from="1767893205533" duration="37000" />
+      <workItem from="1767893296137" duration="73000" />
+      <workItem from="1767893402930" duration="17000" />
+      <workItem from="1767893431852" duration="31000" />
+      <workItem from="1767893617565" duration="474000" />
+      <workItem from="1767894204896" duration="54000" />
+      <workItem from="1767894359326" duration="1025000" />
+      <workItem from="1767895425089" duration="142000" />
+      <workItem from="1767895572176" duration="128000" />
+      <workItem from="1767895715816" duration="796000" />
+      <workItem from="1767899394992" duration="167000" />
+      <workItem from="1767899618162" duration="1840000" />
+      <workItem from="1767954286345" duration="146000" />
+      <workItem from="1767954486491" duration="8023000" />
+      <workItem from="1767965060178" duration="1815000" />
     </task>
+    <task id="LOCAL-00001" summary=".">
+      <option name="closed" value="true" />
+      <created>1767888688034</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1767888688034</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ML_Final$Multivariate_Logit.coverage" NAME="Multivariate Logit Coverage Results" MODIFIED="1767894901097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/ML_Final$main.coverage" NAME="main Coverage Results" MODIFIED="1767957026720" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ML_Final$logit.coverage" NAME="logit Coverage Results" MODIFIED="1767888958225" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/ML_Final$Logit_Plotter.coverage" NAME="Logit Plotter Coverage Results" MODIFIED="1767899431478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/ML_Final$KNN.coverage" NAME="KNN Coverage Results" MODIFIED="1767954329750" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/Model" />
+    <SUITE FILE_PATH="coverage/ML_Final$Multivariate_Logit_Grid_Search.coverage" NAME="Multivariate Logit Grid Search Coverage Results" MODIFIED="1767894776970" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/Grid Search" />
+    <SUITE FILE_PATH="coverage/ML_Final$SVM.coverage" NAME="SVM Coverage Results" MODIFIED="1767895691660" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/ML_Final$RF.coverage" NAME="RF Coverage Results" MODIFIED="1767895310520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/ML_Final$Univariate_Logit_plotter.coverage" NAME="Univariate Logit plotter Coverage Results" MODIFIED="1767899498450" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/Analyse" />
+    <SUITE FILE_PATH="coverage/ML_Final$5_models_comparaison.coverage" NAME="5 models comparaison Coverage Results" MODIFIED="1767962185789" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/Analyse" />
+    <SUITE FILE_PATH="coverage/ML_Final$SVM_Grid_Search.coverage" NAME="SVM Grid Search Coverage Results" MODIFIED="1767955530112" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/Grid Search" />
     <SUITE FILE_PATH="coverage/ML_Final$Download.coverage" NAME="Download Coverage Results" MODIFIED="1767886979874" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/ML_Final$Multivariate_Logistic.coverage" NAME="Multivariate Logistic Coverage Results" MODIFIED="1767889612430" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/ML_Final$Data_cleaning.coverage" NAME="Data cleaning Coverage Results" MODIFIED="1767887635717" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/ML_Final$EDA.coverage" NAME="EDA Coverage Results" MODIFIED="1767887726725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/ML_Final$KNN_plot.coverage" NAME="KNN plot Coverage Results" MODIFIED="1767956905260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/Analyse" />
+    <SUITE FILE_PATH="coverage/ML_Final$XGBoost.coverage" NAME="XGBoost Coverage Results" MODIFIED="1767895825297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/ML_Final$EDA.coverage" NAME="EDA Coverage Results" MODIFIED="1767965540738" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/ML_Final$Mutual_Information.coverage" NAME="Mutual Information Coverage Results" MODIFIED="1767965640073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/ML_Final$XGBoost_Grid_Search.coverage" NAME="XGBoost Grid Search Coverage Results" MODIFIED="1767895726720" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/Grid Search" />
+    <SUITE FILE_PATH="coverage/ML_Final$RF_Grid_Search.coverage" NAME="RF Grid Search Coverage Results" MODIFIED="1767895082653" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/Grid Search" />
+    <SUITE FILE_PATH="coverage/ML_Final$KNN_Grid_Search.coverage" NAME="KNN Grid Search Coverage Results" MODIFIED="1767956252928" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/Grid Search" />
   </component>
 </project>
