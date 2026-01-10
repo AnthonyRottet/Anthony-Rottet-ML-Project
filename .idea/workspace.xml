@@ -4,33 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d03f181-2f5f-4baa-8521-75ff9eaa3438" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Analyse/5 models comparaison.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Analyse/KNN plot.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Analyse/Univariate Logit plotter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Grid Search/KNN Grid Search.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Grid Search/Multivariate Logit Grid Search.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Grid Search/RF Grid Search.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Grid Search/SVM Grid Search.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Grid Search/XGBoost Grid Search.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model Evaluation/KNN.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model Evaluation/Multivariate Logit.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model Evaluation/RF.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model Evaluation/SVM.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model Evaluation/XGBoost.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/KNN.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Multivariate Logit.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/RF.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/SVM.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/XGBoost.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/logit.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Mutual Information.py" afterDir="false" />
+    <list default="true" id="0d03f181-2f5f-4baa-8521-75ff9eaa3438" name="Changes" comment=".">
+      <change afterPath="$PROJECT_DIR$/AI_USAGE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PROPOSAL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/EDA/eda_age.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/EDA/eda_age.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/EDA/eda_bp.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/EDA/eda_bp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/EDA/eda_fbs_over_120.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/EDA/eda_fbs_over_120.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EDA.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/EDA.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model Evaluation/KNN.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model Evaluation/KNN.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +132,7 @@
       <workItem from="1767899618162" duration="1840000" />
       <workItem from="1767954286345" duration="146000" />
       <workItem from="1767954486491" duration="8023000" />
-      <workItem from="1767965060178" duration="1815000" />
+      <workItem from="1767965060178" duration="9040000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <option name="closed" value="true" />
@@ -163,7 +142,23 @@
       <option name="project" value="LOCAL" />
       <updated>1767888688034</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary=".">
+      <option name="closed" value="true" />
+      <created>1767979921236</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1767979921236</updated>
+    </task>
+    <task id="LOCAL-00003" summary=".">
+      <option name="closed" value="true" />
+      <created>1767980006577</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1767980006577</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,7 +170,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ML_Final$Multivariate_Logit.coverage" NAME="Multivariate Logit Coverage Results" MODIFIED="1767894901097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/ML_Final$main.coverage" NAME="main Coverage Results" MODIFIED="1767957026720" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ML_Final$main.coverage" NAME="main Coverage Results" MODIFIED="1767981902726" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ML_Final$logit.coverage" NAME="logit Coverage Results" MODIFIED="1767888958225" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/ML_Final$Logit_Plotter.coverage" NAME="Logit Plotter Coverage Results" MODIFIED="1767899431478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/ML_Final$KNN.coverage" NAME="KNN Coverage Results" MODIFIED="1767954329750" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/Model" />

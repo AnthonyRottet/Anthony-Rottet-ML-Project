@@ -15,7 +15,7 @@ def main():
         print(f"Error: Could not find {PRED_PATH}. Please run the knn_model.py script first!")
         return
 
-    #Load KNN test predictions
+    #Load KNN PROPOSAL.md.md predictions
     df = pd.read_csv(PRED_PATH)
 
     # Set visual style for a professional look
