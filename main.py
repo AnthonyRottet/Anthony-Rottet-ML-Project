@@ -7,7 +7,7 @@ from sklearn.metrics import (
     accuracy_score, classification_report
 )
 
-# --- CONFIGURATION: Model Paths (Relative to ML_Final) ---
+#Where to find th results
 MODELS = {
     "KNN": "results/KNN/knn_test_predictions.csv",
     "SVM": "results/SVM/svm_test_predictions.csv",
@@ -16,7 +16,7 @@ MODELS = {
     "XGBoost": "results/XGBoost/xgboost_test_predictions.csv"
 }
 
-# --- HYPERPARAMETER REGISTRY ---
+#dic of the hyperpar
 HYPERPARAMS = {
     "KNN": {
         "metric": "manhattan",

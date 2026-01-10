@@ -40,7 +40,7 @@ def main():
     X = df[numeric_cols + categorical_cols]
     y = df[target_col].astype(int)
 
-    # 1. Train/Test Split
+    #Train/Test Split
     X_train, X_test, y_train, y_test = train_test_split(
         X, y,
         test_size=0.25,
@@ -48,8 +48,7 @@ def main():
         stratify=y
     )
 
-    # 2. Preprocessing
-    # Using drop='first' for interpretability in Logistic Regression
+    # Preprocessing
     preprocessor = ColumnTransformer(
         transformers=[
             ("num", StandardScaler(), numeric_cols),
@@ -57,8 +56,7 @@ def main():
         ]
     )
 
-    # 3. The Multivariate Logistic Regression Model
-    # UPDATED: Using the exact optimal hyperparameters provided
+    #The Multivariate Logistic Regression Model
     logit_model = LogisticRegression(
         C=0.3593813663804626,
         l1_ratio=0.5,
@@ -68,13 +66,13 @@ def main():
         random_state=SEED
     )
 
-    # 4. Pipeline
+    #Pipeline
     clf = Pipeline(steps=[
         ("preprocess", preprocessor),
         ("model", logit_model)
     ])
 
-    # 5. Fit & Evaluate
+    #Fit & Evaluate
     clf.fit(X_train, y_train)
 
     proba = clf.predict_proba(X_test)[:, 1]
@@ -87,8 +85,8 @@ def main():
     print("-" * 45)
     print("\nClassification Report:\n", classification_report(y_test, pred))
 
-    # 6. Extract Coefficients and Odds Ratios
-    # Converting log-odds to Odds Ratios for medical interpretability
+    #Extract Coefficients and Odds Ratios
+
     feature_names = clf.named_steps["preprocess"].get_feature_names_out()
     coefs = clf.named_steps["model"].coef_.flatten()
 
@@ -98,7 +96,7 @@ def main():
         "odds_ratio": np.exp(coefs)
     }).sort_values("odds_ratio", ascending=False)
 
-    # 7. Save Results
+    #Save Results
     coef_df.to_csv(COEF_OUT, index=False)
 
     pred_df = X_test.copy()

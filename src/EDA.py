@@ -10,26 +10,23 @@ RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
 
 def main():
-    # 1. Load Data
+    #Load Data
     if not DATA_PATH.exists():
         print(f"Error: {DATA_PATH} not found. Run your preprocessing script first.")
         return
 
     df = pd.read_csv(DATA_PATH)
     target_col = "heart_disease"
-
-    # Set theme and ultra-large scaling
     sns.set_theme(style="white")
-    # "poster" scaling is the largest preset; we further scale it by 1.1
     sns.set_context("poster", font_scale=1.1)
 
-    # --- 2. Generate Correlation Matrix ---
+    #correlation matrix
     print("Generating Correlation Matrix with bold numbers...")
     plt.figure(figsize=(22, 16))
 
     corr_matrix = df.corr()
 
-    # Create Heatmap
+    #Heatmap
     sns.heatmap(
         corr_matrix,
         annot=True,  # Show the numbers
@@ -50,7 +47,7 @@ def main():
     plt.savefig(RESULTS_DIR / "correlation_matrix.png", dpi=300, bbox_inches='tight')
     plt.close()
 
-    # --- 3. Distribution Plots (Zero MI Variables) ---
+    #create the plot for the var with a MI of 0
     zero_mi_vars = ["age", "bp", "fbs_over_120"]
 
     for var in zero_mi_vars:
@@ -78,7 +75,6 @@ def main():
                 plt.setp(legend.get_title(), fontsize=24, fontweight='bold')
                 plt.setp(legend.get_texts(), fontsize=22)
 
-        # Global bolding for axes
         plt.ylabel("Density / Count", fontsize=30, fontweight='bold')
         plt.xticks(fontsize=26, fontweight='bold')
         plt.yticks(fontsize=26, fontweight='bold')

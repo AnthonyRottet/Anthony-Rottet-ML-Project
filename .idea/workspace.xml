@@ -5,11 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d03f181-2f5f-4baa-8521-75ff9eaa3438" name="Changes" comment=".">
-      <change afterPath="$PROJECT_DIR$/AI_USAGE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PROPOSAL.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model Evaluation/KNN.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model Evaluation/KNN.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Analyse/5 models comparaison.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Analyse/5 models comparaison.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Analyse/KNN plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Analyse/KNN plot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Analyse/Univariate Logit plotter.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Analyse/Univariate Logit plotter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Data cleaning.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data cleaning.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Download.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Download.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EDA.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/EDA.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Grid Search/KNN Grid Search.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grid Search/KNN Grid Search.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Grid Search/Multivariate Logit Grid Search.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grid Search/Multivariate Logit Grid Search.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Grid Search/RF Grid Search.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grid Search/RF Grid Search.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Grid Search/SVM Grid Search.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grid Search/SVM Grid Search.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Grid Search/XGBoost Grid Search.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grid Search/XGBoost Grid Search.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/KNN.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/KNN.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Multivariate Logit.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Multivariate Logit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/RF.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/RF.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/SVM.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/SVM.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mutual Information.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mutual Information.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,6 +146,7 @@
       <workItem from="1767954286345" duration="146000" />
       <workItem from="1767954486491" duration="8023000" />
       <workItem from="1767965060178" duration="9040000" />
+      <workItem from="1768050377035" duration="3585000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <option name="closed" value="true" />
@@ -158,7 +172,15 @@
       <option name="project" value="LOCAL" />
       <updated>1767980006577</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary=".">
+      <option name="closed" value="true" />
+      <created>1768050388219</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1768050388219</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

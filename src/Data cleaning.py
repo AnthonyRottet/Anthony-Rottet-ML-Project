@@ -4,8 +4,8 @@ from pathlib import Path
 # --- FILE PATHS ---
 RAW_PATH = Path("../data/raw/heart_disease.csv")
 PROCESSED_DIR = Path("../data/processed")
-FULL_CLEAN_PATH = PROCESSED_DIR / "heart_disease_clean.csv"  # Version with all variables
-MINI_CLEAN_PATH = PROCESSED_DIR / "heart_disease_clean_mini.csv"  # Version for finalized models
+FULL_CLEAN_PATH = PROCESSED_DIR / "heart_disease_clean.csv"
+MINI_CLEAN_PATH = PROCESSED_DIR / "heart_disease_clean_mini.csv"
 
 # Ensure the output directory exists
 PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
@@ -21,7 +21,7 @@ def main():
     print("\n=== RAW DATA ===")
     print("Initial Shape:", df.shape)
 
-    # 1. Standardize column names
+    # standardize
     df.columns = (
         df.columns.astype(str)
         .str.strip()
@@ -30,12 +30,12 @@ def main():
         .str.replace("-", "_")
     )
 
-    # 2. Map heart disease variable to binary labels
+    # map heart disease into binary
     target_col = "heart_disease"
     if target_col not in df.columns:
         raise ValueError(f"Target column '{target_col}' not found.")
 
-    # Convert "Presence"/"Absence" to 1/0
+    # convert to 1/0
     df[target_col] = (
         df[target_col]
         .astype(str)
@@ -47,27 +47,24 @@ def main():
         })
     )
 
-    # Check for mapping errors
+    # error handler
     if df[target_col].isna().any():
         print("Unique values in target column before failure:", df[target_col].unique())
         raise ValueError("Target mapping failed. Unrecognized values found in target column.")
 
     print("\n[INFO] Target successfully converted to binary labels.")
 
-    # 3. SAVE FULL VERSION (13 Variables + Target)
-    # This is done before any columns are dropped
+    #Save full version
     df.to_csv(FULL_CLEAN_PATH, index=False)
     print(f"\n[OK] Full dataset (13 variables) saved to: {FULL_CLEAN_PATH}")
     print("Shape:", df.shape)
 
-    # 4. Pruning non-informative features based on Mutual Information (MI)
+    # remove the column with MI of 0
     cols_to_remove = ["age", "bp", "fbs_over_120"]
     print(f"\n[INFO] Pruning non-informative features: {cols_to_remove}")
-
-    # Create the mini version
     df_mini = df.drop(columns=cols_to_remove)
 
-    # 5. Missing values check
+    # Check for missing values
     print("\n=== MISSING VALUES CHECK (MINI VERSION) ===")
     missing = df_mini.isna().sum()
     if missing.sum() > 0:
@@ -75,7 +72,7 @@ def main():
     else:
         print("[OK] No missing values detected.")
 
-    # 6. Export the mini dataset (Finalized features)
+    # Export
     df_mini.to_csv(MINI_CLEAN_PATH, index=False)
 
     print("\n=== SAVED PROCESSED DATA ===")

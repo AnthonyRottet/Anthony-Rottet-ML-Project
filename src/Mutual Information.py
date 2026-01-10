@@ -15,7 +15,7 @@ RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
 
 def main():
-    # 1. Load Data
+    #Load Data
     if not DATA_PATH.exists():
         print(f"Error: {DATA_PATH} not found.")
         return
@@ -23,7 +23,7 @@ def main():
     df = pd.read_csv(DATA_PATH)
     target_col = "heart_disease"
 
-    # Define ALL 13 original features
+    #features
     numeric_cols = ["age", "bp", "cholesterol", "max_hr", "st_depression"]
     categorical_cols = [
         "sex", "chest_pain_type", "fbs_over_120", "ekg_results",
@@ -33,7 +33,7 @@ def main():
     X = df[numeric_cols + categorical_cols]
     y = df[target_col].astype(int)
 
-    # 2. Preprocessing
+    #Preprocessing
     preprocessor = ColumnTransformer(
         transformers=[
             ("num", StandardScaler(), numeric_cols),
@@ -44,24 +44,18 @@ def main():
     X_transformed = preprocessor.fit_transform(X)
     feature_names = preprocessor.get_feature_names_out()
 
-    # 3. Calculate Mutual Information
+    #calculate MI
     mi_scores = mutual_info_classif(X_transformed, y, random_state=SEED)
-
-    # 4. Organize Results
     mi_df = pd.DataFrame({
         "Feature": feature_names,
         "MI_Score": mi_scores
     }).sort_values(by="MI_Score", ascending=False)
 
-    # 5. VISUALIZATION (Ultra-High Visibility)
+    #plots
     plt.figure(figsize=(18, 12))  # Increased figure size
-
-    # Use "poster" scaling for naturally thicker lines and larger base text
     sns.set_context("poster", font_scale=0.9)
     sns.set_theme(style="whitegrid")
-
     palette = sns.color_palette("viridis", len(mi_df))
-
     ax = sns.barplot(
         data=mi_df,
         x="MI_Score",
@@ -71,7 +65,7 @@ def main():
         legend=False
     )
 
-    # --- BOLD & BIGGER TEXT ELEMENTS ---
+    #Size en fontweight for the project
     plt.title("FEATURE IMPORTANCE: MUTUAL INFORMATION SCORES",
               fontsize=32, fontweight='bold', pad=30)
 
@@ -95,7 +89,6 @@ def main():
 
     plt.tight_layout()
 
-    # Save the plot with high resolution and tight borders
     plot_path = RESULTS_DIR / "mutual_information_plot.png"
     plt.savefig(plot_path, dpi=300, bbox_inches='tight')
 

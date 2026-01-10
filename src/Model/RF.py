@@ -10,7 +10,6 @@ from sklearn.metrics import (
     roc_auc_score, accuracy_score, classification_report
 )
 
-#Always the same Seed
 SEED = 42
 
 # Paths
@@ -30,7 +29,7 @@ def main():
     df = pd.read_csv(DATA_PATH)
     target_col = "heart_disease"
 
-    # Define Features
+    #Define Features
     numeric_cols = ["cholesterol", "max_hr", "st_depression"]
     categorical_cols = [
         "sex", "chest_pain_type", "ekg_results",
@@ -40,7 +39,7 @@ def main():
     X = df[numeric_cols + categorical_cols]
     y = df[target_col].astype(int)
 
-    # 1. Train/Test Split
+    #Train/Test Split
     X_train, X_test, y_train, y_test = train_test_split(
         X, y,
         test_size=0.25,
@@ -48,7 +47,7 @@ def main():
         stratify=y
     )
 
-    # 2. Preprocessing
+    #Preprocessing
     preprocessor = ColumnTransformer(
         transformers=[
             ("num", StandardScaler(), numeric_cols),
@@ -56,8 +55,6 @@ def main():
         ]
     )
 
-    # 3. The Random Forest Model
-    # Using the optimal Grid Search Hyperparameters
     rf_model = RandomForestClassifier(
         n_estimators=100,
         max_depth=5,
@@ -67,13 +64,13 @@ def main():
         random_state=SEED
     )
 
-    # 4. Pipeline
+    #Pipeline
     clf = Pipeline(steps=[
         ("preprocess", preprocessor),
         ("model", rf_model)
     ])
 
-    # 5. Fit & Evaluate
+    #Fit & Evaluate
     clf.fit(X_train, y_train)
 
     proba = clf.predict_proba(X_test)[:, 1]
@@ -86,8 +83,6 @@ def main():
     print("-" * 45)
     print("\nClassification Report:\n", classification_report(y_test, pred))
 
-    # 6. Feature Importance
-    # RF can tell us which features were most useful for "splitting" the trees
     feature_names = clf.named_steps["preprocess"].get_feature_names_out()
     importances = clf.named_steps["model"].feature_importances_
 
@@ -96,7 +91,7 @@ def main():
         "importance": importances
     }).sort_values("importance", ascending=False)
 
-    # 7. Save Results
+    #Save Results
     feat_df.to_csv(FEAT_OUT, index=False)
 
     pred_df = X_test.copy()

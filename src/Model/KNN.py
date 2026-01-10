@@ -10,7 +10,6 @@ from sklearn.metrics import (
     roc_auc_score, accuracy_score, classification_report
 )
 
-#Always the same Seed
 SEED = 42
 
 # Paths
@@ -29,7 +28,7 @@ def main():
     df = pd.read_csv(DATA_PATH)
     target_col = "heart_disease"
 
-    # Define Features
+    #Define Features
     numeric_cols = ["cholesterol", "max_hr", "st_depression"]
     categorical_cols = [
         "sex", "chest_pain_type", "ekg_results",
@@ -39,7 +38,7 @@ def main():
     X = df[numeric_cols + categorical_cols]
     y = df[target_col].astype(int)
 
-    # 1. Train/Test Split
+    #Train/Test Split
     X_train, X_test, y_train, y_test = train_test_split(
         X, y,
         test_size=0.25,
@@ -47,7 +46,7 @@ def main():
         stratify=y
     )
 
-    # 2. Preprocessing
+    #Preprocessing
 
     preprocessor = ColumnTransformer(
         transformers=[
@@ -56,8 +55,6 @@ def main():
         ]
     )
 
-    # 3. The K-Nearest Neighbors Model
-    # Using the optimal Grid Search Hyperparameters
     knn_model = KNeighborsClassifier(
         n_neighbors=25,
         weights='distance',
@@ -65,13 +62,13 @@ def main():
         p=1
     )
 
-    # 4. Pipeline
+    #Pipeline
     clf = Pipeline(steps=[
         ("preprocess", preprocessor),
         ("model", knn_model)
     ])
 
-    # 5. Fit & Evaluate
+    #Fit & Evaluate
     clf.fit(X_train, y_train)
 
     proba = clf.predict_proba(X_test)[:, 1]
@@ -84,7 +81,7 @@ def main():
     print("-" * 45)
     print("\nClassification Report:\n", classification_report(y_test, pred))
 
-    # 6. Save Results
+    #Save Results
     pred_df = X_test.copy()
     pred_df["y_true"] = y_test.values
     pred_df["y_proba"] = proba

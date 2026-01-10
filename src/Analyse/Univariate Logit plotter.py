@@ -20,8 +20,6 @@ def main():
     df = pd.read_csv(DATA_PATH)
     target = "heart_disease"
 
-    # We only plot numeric features or binary encoded features for univariate logic
-    # Plotting a 4-category 'chest_pain_type' on one axis is misleading
     features = ["cholesterol", "max_hr", "st_depression", "age", "sex", "exercise_angina"]
 
     sns.set_theme(style="whitegrid")
@@ -35,17 +33,13 @@ def main():
         X_raw = df[[feature]].copy()
         y = df[target].astype(int)
 
-        # 1. Fit Model using statsmodels for the probability curve
+        #Fit Model using statsmodels for the probability curve
         X_const = sm.add_constant(X_raw)
         try:
-            # We use disp=False to keep the terminal clean
             model = sm.Logit(y, X_const).fit(disp=False)
 
-            # 2. Setup Plot
+            #Setup Plot
             plt.figure(figsize=(10, 6))
-
-            # Use Seaborn's regplot with logistic=True
-            # This handles the jittering and the Sigmoid curve automatically
             sns.regplot(
                 x=feature,
                 y=target,
@@ -56,14 +50,14 @@ def main():
                 line_kws={'color': 'crimson', 'lw': 3, 'label': 'Logit Curve'}
             )
 
-            # 3. Formatting
+            #Formatting
             plt.title(f"Univariate Risk Analysis: {feature.replace('_', ' ').title()}", fontsize=14)
             plt.ylabel("Probability of Heart Disease (0.0 - 1.0)", fontsize=12)
             plt.xlabel(f"Feature Value: {feature}", fontsize=12)
             plt.ylim(-0.05, 1.05)
             plt.grid(alpha=0.3)
 
-            # 4. Save
+            #Save
             file_name = f"logit_plot_{feature}.png"
             plt.savefig(OUT_DIR / file_name, dpi=300)
             plt.close()

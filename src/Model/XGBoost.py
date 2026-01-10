@@ -10,7 +10,6 @@ from sklearn.metrics import (
     roc_auc_score, accuracy_score, classification_report
 )
 
-#Always the same Seed
 SEED = 42
 
 # Paths
@@ -39,7 +38,7 @@ def main():
     X = df[numeric_cols + categorical_cols]
     y = df[target_col].astype(int)
 
-    # 1. Train/Test Split
+    #Train/Test Split
     X_train, X_test, y_train, y_test = train_test_split(
         X, y,
         test_size=0.25,
@@ -47,7 +46,7 @@ def main():
         stratify=y
     )
 
-    # 2. Preprocessing
+    # Preprocessing
     preprocessor = ColumnTransformer(
         transformers=[
             ("num", StandardScaler(), numeric_cols),
@@ -55,8 +54,6 @@ def main():
         ]
     )
 
-    # 3. The XGBoost Model
-    # UPDATED: Using the exact optimal hyperparameters from Grid Search
     xgb_model = XGBClassifier(
         n_estimators=100,
         learning_rate=0.1,
@@ -66,13 +63,13 @@ def main():
         random_state=SEED
     )
 
-    # 4. Pipeline
+    #Pipeline
     clf = Pipeline(steps=[
         ("preprocess", preprocessor),
         ("model", xgb_model)
     ])
 
-    # 5. Fit & Evaluate
+    #Fit & Evaluate
     clf.fit(X_train, y_train)
 
     proba = clf.predict_proba(X_test)[:, 1]
@@ -85,7 +82,7 @@ def main():
     print("-" * 45)
     print("\nClassification Report:\n", classification_report(y_test, pred))
 
-    # 6. Save Results
+    #Save Results
     pred_df = X_test.copy()
     pred_df["y_true"] = y_test.values
     pred_df["y_proba"] = proba

@@ -5,7 +5,6 @@ import seaborn as sns
 from pathlib import Path
 from sklearn.metrics import confusion_matrix, roc_curve, auc
 
-# Define the models and their corresponding result directories
 MODELS = {
     "KNN": "../../results/KNN/knn_test_predictions.csv",
     "SVM": "../../results/SVM/svm_test_predictions.csv",
@@ -27,7 +26,7 @@ RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
 
 def main():
-    # Load the data and check files
+    #Load the data and check files
     model_data = {}
     for name, path_str in MODELS.items():
         path = Path(path_str)
@@ -40,10 +39,10 @@ def main():
         print("Error: No prediction files found. Run the classifier scripts first!")
         return
 
-    # Set visual style
+    # et visual style
     sns.set_theme(style="white")
 
-    # --- 1. Plot Combined ROC Curves ---
+    #Plot Combined ROC Curves
     plt.figure(figsize=(10, 8))
 
     for name, df in model_data.items():
@@ -63,14 +62,13 @@ def main():
     plt.savefig(RESULTS_DIR / "combined_roc_comparison.png", dpi=300)
     plt.close()
 
-    # --- 2. Plot Confusion Matrix Grid (Enhanced Visibility) ---
+    #Plot Confusion Matrix Grid
     fig, axes = plt.subplots(2, 3, figsize=(18, 12))
     axes = axes.flatten()
 
     for i, (name, df) in enumerate(model_data.items()):
         cm = confusion_matrix(df['y_true'], df['y_pred'])
 
-        # Heatmap with enlarged bold numbers and bold labels
         sns.heatmap(cm,
                     annot=True,
                     fmt='d',
@@ -84,13 +82,11 @@ def main():
         # Style the tick labels (Healthy/Sick)
         axes[i].set_xticklabels(['Healthy', 'Sick'], fontsize=14, fontweight='bold')
         axes[i].set_yticklabels(['Healthy', 'Sick'], fontsize=14, fontweight='bold')
-
-        # Style the Title and Axis Labels
         axes[i].set_title(f'{name}', fontsize=25, fontweight='bold', pad=15)
         axes[i].set_ylabel('Actual Status', fontsize=20, fontweight='bold')
         axes[i].set_xlabel('Predicted Status', fontsize=20, fontweight='bold')
 
-    # Remove the 6th empty subplot
+    # Remove the 6th plot
     if len(model_data) < 6:
         fig.delaxes(axes[5])
 
@@ -98,7 +94,7 @@ def main():
     plt.savefig(RESULTS_DIR / "confusion_matrix_grid.png", dpi=300)
     plt.close()
 
-    # --- 3. Generate Performance Summary Table ---
+    #Performance Summary Table
     summary_list = []
     for name, df in model_data.items():
         fpr, tpr, _ = roc_curve(df['y_true'], df['y_proba'])
@@ -111,7 +107,6 @@ def main():
     summary_df = pd.DataFrame(summary_list).sort_values(by="AUC Score", ascending=False)
     summary_df.to_csv(RESULTS_DIR / "model_performance_summary.csv", index=False)
 
-    # Print results to console
     print("\n=== MASTER EVALUATION COMPLETE ===")
     print("-" * 45)
     print("Performance Summary (Sorted by AUC):")
